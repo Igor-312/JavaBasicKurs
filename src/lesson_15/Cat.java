@@ -27,20 +27,20 @@ public class Cat {
         this.age = age;
     }
 
-    public void sleep() {
-        System.out.println("I am sleep!");
-    }
-
-    public void run() {
-        System.out.println("I am run!");
-    }
-
-    public void sayMeow() {
-        System.out.println("Meow!");
-    }
+//    public void sleep() {
+//        System.out.println("I am sleep!");
+//    }
+//
+//    public void run() {
+//        System.out.println("I am run!");
+//    }
+//
+//    public void sayMeow() {
+//        System.out.println("Meow!");
+//    }
 
     public void whoAmI() {
-        System.out.printf("Я котик %s, мой возраст: %d, мой окрас: %s\n", name, age, color);
+        System.out.printf("Я котик: %s, мой возраст: %d, мой окрас: %s\n", name, age, color);
     }
 
 
