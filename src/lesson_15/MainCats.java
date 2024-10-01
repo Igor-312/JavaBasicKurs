@@ -6,9 +6,9 @@ public class MainCats {
         Cat cat = new Cat();
 
 
-//        cat.sayMeow();
-//        cat.run();
-//        cat.sleep();
+        cat.sayMeow();
+        cat.run();
+        cat.sleep();
 
         String catName = cat.name;
         System.out.println("Name Cat: " + catName);
