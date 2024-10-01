@@ -64,13 +64,16 @@ public class MagicArray {
         }
 
         return Integer.MIN_VALUE;
-        //TODO
+
 
     }
 
 
     int remove(int index) {
 
+
+
+        return  -1;
     }
 
 
