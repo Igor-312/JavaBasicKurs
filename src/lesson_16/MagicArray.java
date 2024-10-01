@@ -64,7 +64,7 @@ public class MagicArray {
         }
 
         return Integer.MIN_VALUE;
-
+        //TODO
 
     }
 
