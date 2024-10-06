@@ -11,5 +11,35 @@ public class Person {
         this.hobby = hobby;
     }
 
+    public String toString() {
+        // Формирование строки по шаблону с подставляемыми значениями
+        return String.format("Person %s, Age: %d, Hobby: %s", name, age, hobby);
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
+
+
 
 }
