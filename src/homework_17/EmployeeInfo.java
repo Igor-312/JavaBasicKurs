@@ -1,7 +1,5 @@
 package homework_17;
-/*
-Инкапсулировать класс нашего магического массива
- */
+
 
 public class EmployeeInfo {
     public static void main(String[] args) {
