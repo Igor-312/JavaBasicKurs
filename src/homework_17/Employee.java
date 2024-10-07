@@ -19,7 +19,36 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String Info() {
-        return String.format("Employee: %s, age: %d, salary: %s ", name, age, salary);
+    public String toString() {
+        return String.format("Employee %s, age: %d, salary: %.2f", name, age, salary);
+    }
+
+//    public void info() {
+//        System.out.println(this.toString());
+//    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name == null || name.isEmpty()) return;
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 }
