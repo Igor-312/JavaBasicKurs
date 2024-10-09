@@ -17,7 +17,7 @@ public class Calculator19 {
         return PI * radius * radius;
     }
 
-    public static double circlePerimetr(double radius) {
+    public static double circlePerimeter(double radius) {
         return 2 * PI * radius;
     }
 

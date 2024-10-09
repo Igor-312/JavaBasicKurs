@@ -6,7 +6,7 @@ public class CalculatorApp19 {
         double radius = 10.5;
         double area = Calculator19.circleArea(radius);
         System.out.println("Area = " + area);
-        System.out.println("Perimeter = " + Calculator19.circlePerimetr(radius));
+        System.out.println("Perimeter = " + Calculator19.circlePerimeter(radius));
 
 
     }
