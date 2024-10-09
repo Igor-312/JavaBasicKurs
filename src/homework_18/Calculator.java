@@ -23,6 +23,9 @@ public class Calculator {
     }
     // деление
     static double divide(double a, double b) {
+        if (b == 0) {
+            return Integer.MIN_VALUE;
+        }
        return a / b;
     }
 
