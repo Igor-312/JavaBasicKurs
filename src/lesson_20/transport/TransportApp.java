@@ -5,17 +5,18 @@ public class TransportApp {
 
         Bus bus = new Bus("Bus-X1", 2020, 10);
 
-        System.out.println(bus.toString());
+        String str = bus.toString();
+        System.out.println(str);
 
         bus.start();
         bus.stop();
 
         System.out.println("bus.getModel(): " + bus.getModel());
-        System.out.println("bus.getCapacity()" + bus.getCapacity());
+        System.out.println("bus.getCapacity(): " + bus.getCapacity());
 
-        System.out.println("\n ================================= \n");
+        System.out.println("\n======================");
 
-        Train train = new Train("Siemens", 2022, 40, 4);
+        Train train = new Train("Skoda", 2022, 40, 4);
 
         System.out.println(train.toString());
         train.start();
@@ -26,19 +27,31 @@ public class TransportApp {
         train.setCountWagons(3);
         System.out.println("Capacity: " + train.getCapacity());
 
-        System.out.println("========================== \n");
+        System.out.println("\n ===================");
 
-        Bus bus1 = new Bus("Bus-2", 2024,3);
+        Bus bus1 = new Bus("Bus-X2", 2024, 3);
         System.out.println(bus1.takePassenger());
-        System.out.println("===============");
+        System.out.println("=============");
         System.out.println(bus1.takePassenger());
-        System.out.println("===============");
+        System.out.println("=============");
         System.out.println(bus1.takePassenger());
-        System.out.println("===============");
+        System.out.println("=============");
         System.out.println(bus1.takePassenger());
 
-        System.out.println(bus1.getCountPassengers());
-        System.out.println(bus1.dropPassenger);
+        System.out.println("\nbus1.getCountPassengers(): " + bus1.getCountPassengers());
+
+        System.out.println("\n ==================");
+        System.out.println(bus1.dropPassenger());
+        System.out.println("=================");
+        System.out.println(bus1.dropPassenger());
+        System.out.println("=================");
+        System.out.println(bus1.dropPassenger());
+        System.out.println("=================");
+        System.out.println(bus1.dropPassenger());
+        System.out.println("=================");
+
+        System.out.println("bus1.getCountPassengers(): " + bus1.getCountPassengers());
+
 
     }
 }

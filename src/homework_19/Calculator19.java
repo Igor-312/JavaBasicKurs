@@ -1,4 +1,5 @@
 package homework_19;
+
 /*
 Task 1
 Класс "Калькулятор"
@@ -13,11 +14,11 @@ public class Calculator19 {
     public static final double PI = 3.141519;
 
     public static double circleArea(double radius) {
-        return PI* radius*radius;
+        return PI * radius * radius;
     }
 
     public static double circlePerimetr(double radius) {
-        return 2 * PI* radius;
+        return 2 * PI * radius;
     }
 
 

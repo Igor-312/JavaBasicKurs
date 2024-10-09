@@ -64,7 +64,7 @@ public class StringBuilderExample {
         // Если увеличить строку, она будет заполнена char с кодом 0
         System.out.println("sb.setLength(10): " + sb);
         char ch1 = sb.charAt(8);
-        System.out.println("sb.charAt(8): " +  (int) ch1);
+        System.out.println("sb.charAt(8): " + (int) ch1);
 
         sb.setLength(3);
         System.out.println("sb.setLength(3): " + sb);

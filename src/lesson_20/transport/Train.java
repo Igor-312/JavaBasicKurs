@@ -9,7 +9,7 @@ public class Train extends Vehicle {
     private final int wagonCapacity;
 
     public Train(String model, int year, int wagonCapacity, int countWagons) {
-        super(model, year);
+        super(model, year); // Конструктор родителя
         this.wagonCapacity = wagonCapacity;
         this.countWagons = countWagons;
         calculateCapacity();
@@ -21,7 +21,7 @@ public class Train extends Vehicle {
 
     public void setCountWagons(int countWagons) {
         this.countWagons = countWagons;
-
+        calculateCapacity();
     }
 
     public int getCapacity() {
