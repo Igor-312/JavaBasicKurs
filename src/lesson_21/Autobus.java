@@ -105,10 +105,22 @@ public class Autobus {
         return countPassenger;
     }
 
+//    public String toString() {
+//        return "Autobus: {id: " + id + ", capacity: " + capacity +
+//                "; driver: " + driver.toString() +
+//                "; autopilot: " + autopilot.toString() +
+//                "}";
+//    }
+
     public String toString() {
-        return "Autobus: {id: " + id + ", capacity: " + capacity +
-                "; driver: " + driver.toString() +
-                "; autopilot: " + autopilot.toString() +
-                "}";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Autobus: {");
+        sb.append("id: ").append(id).append("; ");
+        sb.append("capacity: ").append(capacity).append("; ");
+        sb.append("driver: ").append(driver.toString()).append("; ");
+        sb.append("autopilot: ").append(autopilot.toString());
+        sb.append("}");
+        return sb.toString();
     }
+
 }
