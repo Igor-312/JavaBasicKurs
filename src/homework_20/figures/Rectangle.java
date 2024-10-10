@@ -6,7 +6,7 @@ package homework_20.figures;
 которые хранят размеры прямоугольника. • Создайте метод setDimensions(double width, double height),
 который устанавливает значения полей width и height. • Создайте метод calculateArea(), который вычисляет
 и выводит площадь прямоугольника.
- */
+        */
 public class Rectangle extends Shape {
 
     private double width;
