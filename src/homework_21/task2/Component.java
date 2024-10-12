@@ -1,4 +1,4 @@
-package homework_21;
+package homework_21.task2;
 
 public class Component {
     private String brand;
@@ -9,19 +9,17 @@ public class Component {
         this.model = model;
     }
 
-    public String getBrand() {
-        return brand;
+    public String toString() {
+        return "Component: " + brand + " | " + model;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+
+    public String getBrand() {
+        return brand;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
 }
