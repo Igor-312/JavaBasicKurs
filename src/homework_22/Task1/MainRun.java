@@ -15,8 +15,8 @@ public class MainRun {
         ProfessionalAthlete professionalAthlete = new ProfessionalAthlete();
 
 
-        person.rest();
-        amateurAthlete.rest();
-        professionalAthlete.rest();
+        person.run();
+        amateurAthlete.run();
+        professionalAthlete.run();
     }
 }
