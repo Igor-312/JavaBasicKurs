@@ -1,4 +1,4 @@
-package homework_23;
+package homework_23.Shapes;
 
 public class Rectangle extends Shape {
     private double weight;
@@ -7,6 +7,7 @@ public class Rectangle extends Shape {
     public Rectangle(double weight, double height) {
         this.weight = weight;
         this.height = height;
+        this.type = "Прямоугольник";
     }
 
     @Override
