@@ -1,4 +1,4 @@
-package homework.homework_26.pair;
+package homework.homework_26.task1;
 
 /*
 Task 1

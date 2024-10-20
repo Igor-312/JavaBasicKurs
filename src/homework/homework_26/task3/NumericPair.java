@@ -1,4 +1,4 @@
-package homework.homework_26.numeric;
+package homework.homework_26.task3;
 
 public class NumericPair<T extends Number> {
     private T first;
@@ -9,15 +9,15 @@ public class NumericPair<T extends Number> {
         this.second = second;
     }
 
+    public double sum() {
+        return first.doubleValue() + second.doubleValue();
+    }
+
     public T getFirst() {
         return first;
     }
 
     public T getSecond() {
         return second;
-    }
-
-    public double sum(){
-        return first.doubleValue() + second.doubleValue();
     }
 }

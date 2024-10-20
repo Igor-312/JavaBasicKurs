@@ -1,4 +1,4 @@
-package homework.homework_26.pair;
+package homework.homework_26.task1;
 
 public class Pair<T> {
     private T first;
@@ -40,5 +40,14 @@ public class Pair<T> {
         first = second;
         second = third;
         third = temp;
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                ", third=" + third +
+                '}';
     }
 }

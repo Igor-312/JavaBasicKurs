@@ -1,4 +1,4 @@
-package homework.homework_26.twolists;
+package homework.homework_26.task2;
 
 /*
 Task 2. * Опционально
