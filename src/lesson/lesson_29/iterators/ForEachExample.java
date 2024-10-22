@@ -8,7 +8,7 @@ import java.util.Iterator;
 public class ForEachExample {
     public static void main(String[] args) {
 
-        MyList<String> list = new MyArrayList<>();
+        MyArrayList<String> list = new MyArrayList<>();
 
         list.add("Hello");
         list.add("World");
@@ -22,14 +22,32 @@ public class ForEachExample {
             System.out.println(s);
         }
 
+        // Цикл for-each
+
         while (iterator.hasNext()) {
             String s = iterator.next();
         }
 
-        System.out.println("=============");
-
-        for (String s : list) {
+        /*
+        for (ТипПеременной переменная : коллекция) {
+            // Действия с переменной
+        }
+         */
+        for (String s : list){
             System.out.println(s);
         }
+
+        // Цикл for-each НЕ должен изменять состояние коллекции (добавлять или удалять элементы)
+        for (String s : list){
+            if (s.equals("World")){
+//                list.remove(s);
+                list.add("JS");
+            }
+        }
+
+        System.out.println(list);
+
+
+
     }
 }
