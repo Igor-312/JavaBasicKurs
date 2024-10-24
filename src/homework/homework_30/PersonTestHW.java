@@ -1,4 +1,4 @@
-package homework.homework_30.password;
+package homework.homework_30;
 
 import lesson.lesson_30.persons.Person;
 import org.junit.jupiter.api.Assertions;
@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-public class PersonTest {
+public class PersonTestHW {
 
     Person person;
     String startEmail = "john@test.com";
@@ -100,11 +100,11 @@ public class PersonTest {
 
     static Stream<String> invalidPassword() {
         return Stream.of(
-                "Pass12!",
-                "Password!",
-                "PASSWORD123!",
-                "password123!",
-                "Password123"
+                "Pass12!", // короткий
+                "Password!", // без цифры
+                "PASSWORD123!", // без маленькой буквы
+                "password123!", // без большой буквы
+                "Password123" // без специального символа
         );
     }
 
