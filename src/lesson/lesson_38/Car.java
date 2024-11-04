@@ -11,9 +11,10 @@ public class Car implements Comparable<Car> {
         this.speed = speed;
     }
 
+
     @Override
     public String toString() {
-        return "Car{" +
+        return "Car {" +
                 "model = '" + model + '\'' +
                 ", year = " + year +
                 ", speed = " + speed +
@@ -44,7 +45,7 @@ public class Car implements Comparable<Car> {
         this.speed = speed;
     }
 
-    // Сравнение машин по году выпуска. "Меньшей" будет считаться машина с более ранним годом выпуска.
+    // Сравнение машин по году выпуска. "Меньшей" будет считаться машина с меньшим (более ранним) годом выпуска
     @Override
     public int compareTo(Car car1) {
         return this.year - car1.year;
