@@ -1,4 +1,4 @@
-package homework.homework_38;
+package homework.homework_38.sportsmans;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -29,14 +29,15 @@ public class ComparatorSportApp {
             @Override
             public int compare(Sportsman s1, Sportsman s2) {
                 return Integer.compare(s1.getAge(), s2.getAge());
-
-               // TODO разобраться почему не работает код compareTo
-               // return s1.getAge().compareTo(s2.getAge());
+                // return s1.getAge() - s2.getAge(); Примитив, код работает
+                // return s1.getAge().compareTo(s2.getAge()); Примитив, код не работает, необходима обёртка.
             }
         });
 
-        System.out.println(Arrays.toString(sportsman));
-
+        System.out.println(Arrays.toString(sportsman)); // вывод в строку
+        for (Sportsman s : sportsman) {                 // вывод в столбец
+            System.out.println(s);
+        }
 
 
     }

@@ -1,4 +1,4 @@
-package homework.homework_38;
+package homework.homework_38.sportsmans;
 
 import java.util.Comparator;
 
