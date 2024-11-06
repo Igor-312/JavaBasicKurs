@@ -3,14 +3,16 @@ package lesson.lesson_40.set;
 import java.util.*;
 
 public class SetExample {
-    /*
-       Контракт между equals() и hashCode()
-       Для корректной работы хэш - коллекций есть важное правило, состоящее из 3 условий:
-       1. Если два объекта равны по методу equals, то их хеш-коды тоже должны быть равны.
-       2. Если хеш-коды двух объектов различны, то объекты точно не равны по equals.
-       Обратное не всегда верно. Разные объекты могут иметь одинаковый хеш-код (коллизия)
-       3. Вызов методы hasCode должен возвращать одинаковое значение при многократном вызове на неизмененном объекта
-    */
+ /*
+    Контракт между equals() и hashCode()
+    Для корректной работы хэш - коллекций есть важное правило, состоящее из 3 условий:
+    1. Если два объекта равны по методу equals, то их хеш-коды тоже должны быть равны.
+    2. Если хеш-коды двух объектов различны, то объекты точно не равны по equals.
+    Обратное не всегда верно. Разные объекты могут иметь одинаковый хеш-код (коллизия)
+    3. Вызов методы hasCode должен возвращать одинаковое значение при многократном вызове на неизмененном объекта
+
+     */
+
     public static void main(String[] args) {
 
         // Конструкторы
@@ -24,7 +26,7 @@ public class SetExample {
         List<Integer> startValues = new ArrayList<>(List.of(15, 1, 2, 3, 4, 3, 8, 6, 15, 7, 0, 16, 32));
         System.out.println(startValues);
 
-        // HashSet не поддерживает порядко добавления элементов
+        // HashSet не поддерживает порядок добавления элементов
         Set<Integer> integers = new HashSet<>(startValues);
         System.out.println("integers hashSet: " + integers);
 
@@ -35,8 +37,8 @@ public class SetExample {
         // Метода интерфейса Set
 
         // boolean add(E e) - добавление элемента
-        System.out.println("integers.add(100): " + integers.add(100)); // true - элемент добавлен, т.к. еще не было такого значения
-        // false - элемент НЕ добавлен, т.к. такое значения уже есть в сете (дубликат)
+        System.out.println("integers.add(100): " + integers.add(100)); // true - элемент добавлен, так как еще не было такого значения
+        // false - элемент НЕ добавлен, так как такое значения уже есть в сете (дубликат)
         System.out.println("integers.add(100) #2 : " + integers.add(100)); // false
         System.out.println("integers: " + integers);
 
@@ -116,7 +118,7 @@ public class SetExample {
         // от fromElement (включительно) до toElement (не включительно)
         System.out.println("integerSortedSet.subSet(3, 16): " + integerSortedSet.subSet(3, 16));
 
-        // comparator() - Возвращает компаратор, используемый для упорядочивание элементов в этом множестве
+        // comparator() - Возвращает компаратор, используемый для упорядочивания элементов в этом множестве
         // вернется null если используется естественный порядок
         System.out.println(integerSortedSet.comparator());
 
