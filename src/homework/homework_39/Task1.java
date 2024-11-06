@@ -18,7 +18,7 @@ public class Task1 {
         list2.addAll(List.of(4, 5, 6, 7, 8, 9));
         System.out.println("List1: " + list1);
         System.out.println("List2: " + list2);
-        list1.retainAll(list2);
+        list1.retainAll(list2); // используем метод retainAll()
         System.out.println("Список элементов, который присутствуют в обеих коллекциях: " + list1);
 
         System.out.println("=========================================================================");
@@ -30,7 +30,7 @@ public class Task1 {
         list4.addAll(List.of("Ferrari", "Porsche", "Audi", "BMW", "Jeep"));
         System.out.println("List3: " + list3);
         System.out.println("List4: " + list4);
-        list3.retainAll(list4);
+        list3.retainAll(list4); // используем метод retainAll()
         System.out.println("Список элементов, который присутствуют в обеих коллекциях: " + list3);
 
     }
