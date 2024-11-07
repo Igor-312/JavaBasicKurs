@@ -6,9 +6,10 @@ public class Task1 {
 
     public static List<String> getUniqueSortedWords(String list) {
         String newString = list.replaceAll("[^a-zA-Z0-9а-яА-Я ]", "");
-        String[] words = newString.split(" ");
+        String[] words = newString.split("\\s+");
         Set<String> uniqueWords = new HashSet<>(Arrays.asList(words));
         List<String> wordList = new ArrayList<>(uniqueWords);
+        wordList.sort(Comparator.comparingInt(String::length).thenComparing(String::compareTo));
         return wordList;
     }
 
