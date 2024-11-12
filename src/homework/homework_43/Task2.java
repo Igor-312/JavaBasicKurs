@@ -2,6 +2,7 @@ package homework.homework_43;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 /*
 Task 2
 Дан список строк.
