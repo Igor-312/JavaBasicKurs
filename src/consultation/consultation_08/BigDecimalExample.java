@@ -1,11 +1,17 @@
 package consultation.consultation_08;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+/**
+ * @author Sergey Bugaenko
+ * {@code @date} 08.10.2024
+ */
+
 /*
 Класс BigDecimal предоставляет методы для выполнения основных математических операций.
 Кроме того он позволяет конвертировать значения в примитивные типы данных
  */
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 public class BigDecimalExample {
     public static void main(String[] args) {

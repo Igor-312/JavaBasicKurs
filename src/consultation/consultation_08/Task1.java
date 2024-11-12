@@ -2,6 +2,11 @@
 //
 //import java.util.Random;
 //
+///**
+// * @author Sergey Bugaenko
+// * {@code @date} 08.10.2024
+// */
+//
 //public class Task1 {
 //
 //    public static void main(String[] args) {

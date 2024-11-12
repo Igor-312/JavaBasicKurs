@@ -1,4 +1,9 @@
 package consultation.consultation_08;
+
+/**
+ * @author Sergey Bugaenko
+ * {@code @date} 08.10.2024
+ */
 /*
 Написать класс Собака (Dog).
 
