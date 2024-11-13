@@ -19,7 +19,7 @@ public class Task1 {
                 .collect(Collectors.toList());
 
 
-        System.out.println("Числа больше десяти и отсортированные числа по последней цифре: " + result);
+        System.out.println("Числа больше десяти и отсортированные по последней цифре: " + result);
 
     }
 

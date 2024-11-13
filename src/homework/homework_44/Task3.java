@@ -15,6 +15,7 @@ public class Task3 {
 
         List<Integer> result = numbers.stream()
                 .filter(n -> n % 2 == 0)
+                .peek(System.out::println)
                 .map(n -> n * 2)
                 .collect(Collectors.toList());
 
