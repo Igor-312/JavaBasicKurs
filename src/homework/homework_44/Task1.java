@@ -1,8 +1,8 @@
 package homework.homework_44;
 
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
 Task 1
@@ -11,19 +11,15 @@ Task 1
  */
 public class Task1 {
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(5, 16, 12, 23, 8, 10, 34, 7, 42, 19, 11, 110);
+        List<Integer> numbers = Arrays.asList(5, 16, 12, 23, 8, 10, 34, 7, 42, 19, 11, 110);
 
-        List<Integer> filteredNumbers = new ArrayList<>();
-        for (Integer number : numbers) {
-            if (number > 10) {
-                filteredNumbers.add(number);
-            }
-        }
-        System.out.println("Числа больше десяти: " + filteredNumbers);
+        List<Integer> result = numbers.stream()
+                .filter(n -> n > 10)
+                .sorted((n1, n2) -> Integer.compare(n1 % 10, n2 % 10))
+                .collect(Collectors.toList());
 
-        filteredNumbers.sort(Comparator.comparingInt(n -> n % 10));
 
-        System.out.println("Отсортированные числа по последней цифре: " + filteredNumbers);
+        System.out.println("Числа больше десяти и отсортированные числа по последней цифре: " + result);
 
     }
 
