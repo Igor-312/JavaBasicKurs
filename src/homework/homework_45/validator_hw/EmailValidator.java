@@ -66,22 +66,45 @@ public class EmailValidator {
             throw new PasswordValidateException("Password should be at least 8 characters");
         }
 
-                String symbols = "!%$@&*()[].,-";
+        boolean isDigit = false;
+        boolean isUpperCase = false;
+        boolean isLowerCase = false;
+        boolean isSpecialSymbol = false;
+
+        // альтернативный способ объявление переменных
+        boolean[] result = new boolean[4]; // false, false, false, false
+
+        String symbols = "!%$@&*()[].,-";
 
         // Перебираю символы
         for (int i = 0; i < password.length(); i++) {
             char ch = password.charAt(i);
 
-            if (Character.isDigit(password.charAt(i))) throw new PasswordValidateException("Password must contain at least one digit");
-            if (Character.isUpperCase(password.charAt(i))) throw new PasswordValidateException("Password must contain at least one uppercase letter");
-            if (Character.isLowerCase(password.charAt(i))) throw new PasswordValidateException("Password must contain at least one lowercase letter");
-            if (symbols.indexOf(password.charAt(i)) == -1) throw new PasswordValidateException("Password must contain at least one special character");
+            if (Character.isDigit(ch)) isDigit = true; // res[0] = true
+            if (Character.isUpperCase(ch)) isUpperCase = true; // res[1] = true
+            if (Character.isLowerCase(ch)) isLowerCase = true; //  res[2] = true
+            if (symbols.indexOf(ch) >= 0) isSpecialSymbol = true;
+            // if (symbols.contains(String.valueOf(ch))) isSpecialSymbol = true;
 
         }
 
+        if (!isDigit) {
+            throw new PasswordValidateException("Password must contain at least one digit");
+        }
+        if (!isUpperCase) {
+            throw new PasswordValidateException("Password must contain at least one uppercase letter");
+        }
+        if (!isLowerCase) {
+            throw new PasswordValidateException("Password must contain at least one lowercase letter");
+        }
+        if (!isSpecialSymbol) {
+            throw new PasswordValidateException("Password must contain at least one special character");
+        }
+
+
+        // Если хотя бы в одной переменной останется значение false, то весь пароль НЕ будет признан валидным = (признан не валидным)
+
     }
-
-
 
 
 }

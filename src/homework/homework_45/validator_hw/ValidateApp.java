@@ -4,11 +4,11 @@ import lesson.lesson_45.validator.EmailValidateException;
 import lesson.lesson_45.validator.EmailValidator;
 
 public class ValidateApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PasswordValidateException {
 
         // Получаем email от пользователя (Сканером, из другого слоя приложения).
         String email = "te!st@email.com";
-        String password = "123456";
+        String password = "Wfhj123!";
 
         // Валидация email
         try {
@@ -25,6 +25,12 @@ public class ValidateApp {
             System.out.println(message);
         }
 
+        try {
+            homework.homework_45.validator_hw.EmailValidator.isPasswordValid(password);
+            System.out.println("Password is valid");
+        } catch (PasswordValidateException error) {
+            System.out.println("Password is not valid");
+        }
         // Когда
     }
 }
