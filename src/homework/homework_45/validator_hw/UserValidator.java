@@ -1,8 +1,7 @@
 package homework.homework_45.validator_hw;
 
-import lesson.lesson_45.validator.EmailValidateException;
 
-public class EmailValidator {
+public class UserValidator {
 
     public static void isEmailValid(String email) throws EmailValidateException {
 
@@ -71,8 +70,6 @@ public class EmailValidator {
         boolean isLowerCase = false;
         boolean isSpecialSymbol = false;
 
-        // альтернативный способ объявление переменных
-        boolean[] result = new boolean[4]; // false, false, false, false
 
         String symbols = "!%$@&*()[].,-";
 
@@ -80,13 +77,14 @@ public class EmailValidator {
         for (int i = 0; i < password.length(); i++) {
             char ch = password.charAt(i);
 
-            if (Character.isDigit(ch)) isDigit = true; // res[0] = true
-            if (Character.isUpperCase(ch)) isUpperCase = true; // res[1] = true
-            if (Character.isLowerCase(ch)) isLowerCase = true; //  res[2] = true
+            if (Character.isDigit(ch)) isDigit = true;
+            if (Character.isUpperCase(ch)) isUpperCase = true;
+            if (Character.isLowerCase(ch)) isLowerCase = true;
             if (symbols.indexOf(ch) >= 0) isSpecialSymbol = true;
-            // if (symbols.contains(String.valueOf(ch))) isSpecialSymbol = true;
-
         }
+
+        System.out.printf("%s | %s | %s | %s\n", isDigit, isUpperCase, isLowerCase, isSpecialSymbol);
+
 
         if (!isDigit) {
             throw new PasswordValidateException("Password must contain at least one digit");

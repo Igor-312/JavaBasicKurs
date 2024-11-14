@@ -1,36 +1,40 @@
 package homework.homework_45.validator_hw;
 
-import lesson.lesson_45.validator.EmailValidateException;
-import lesson.lesson_45.validator.EmailValidator;
 
 public class ValidateApp {
-    public static void main(String[] args) throws PasswordValidateException {
+    public static void main(String[] args) {
 
         // Получаем email от пользователя (Сканером, из другого слоя приложения).
-        String email = "te!st@email.com";
-        String password = "Wfhj123!";
+        String email = "test@email.com";
+        String password = "Wqe@123!";
 
         // Валидация email
         try {
-            EmailValidator.isEmailValid(email);
+            UserValidator.isEmailValid(email);
             // Если мы дойдем до этой строчки кода,
             // значит email валидный
             System.out.println("Email прошел проверку");
+
+            UserValidator.isPasswordValid(password);
+            System.out.println("Password is valid");
             // User user = new User(email, password)
         } catch (EmailValidateException e) {
-            // email не прошел проверку.
+            // Email не прошел проверку.
             // Запросить у пользователя другой ввод
             System.out.println("Email is not valid");
             String message = e.getMessage();
             System.out.println(message);
+        } catch (PasswordValidateException ex) {
+            System.out.println("Password is not valid");
+            System.out.printf(ex.getMessage());
         }
 
-        try {
-            homework.homework_45.validator_hw.EmailValidator.isPasswordValid(password);
-            System.out.println("Password is valid");
-        } catch (PasswordValidateException error) {
-            System.out.println("Password is not valid");
-        }
+//        try {
+//            UserValidator.isPasswordValid(password);
+//            System.out.println("Password is valid");
+//        } catch (PasswordValidateException error) {
+//            System.out.println("Password is not valid");
+//        }
         // Когда
     }
 }
